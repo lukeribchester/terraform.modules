@@ -10,6 +10,7 @@ This repository contains the following shared Terraform modules:
 - `artifact_registry_repository`
 - `cloud_run_service`
 - `storage_bucket`
+- `vpc_network`
 
 # Usage
 
