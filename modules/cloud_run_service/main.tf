@@ -39,6 +39,8 @@ resource "google_cloud_run_v2_service" "this" {
       template[0].labels
     ]
   }
+
+  depends_on = [google_project_service.run]
 }
 
 resource "google_cloud_run_domain_mapping" "this" {

@@ -1,4 +1,4 @@
-resource "google_project_service" "this" {
+resource "google_project_service" "storage" {
   project = var.project
   service = "storage.googleapis.com"
 }
@@ -14,4 +14,6 @@ resource "google_storage_bucket" "this" {
   versioning {
     enabled = var.versioning
   }
+
+  depends_on = [google_project_service.storage]
 }

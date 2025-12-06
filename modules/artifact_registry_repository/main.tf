@@ -8,6 +8,8 @@ resource "google_artifact_registry_repository" "this" {
   repository_id = var.repository_id
   location      = var.location
   format        = var.format
+
+  depends_on = [google_project_service.artifact_registry]
 }
 
 resource "google_artifact_registry_repository_iam_member" "reader" {

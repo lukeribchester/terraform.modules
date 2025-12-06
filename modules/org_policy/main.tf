@@ -12,4 +12,6 @@ resource "google_org_policy_policy" "this" {
       enforce = var.enforce
     }
   }
+
+  depends_on = [google_project_service.org_policy]
 }
